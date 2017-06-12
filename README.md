@@ -7,3 +7,27 @@ There is a hidden file called `.catsoop_login` that must have the user's credent
 user
 password
 ```
+
+
+```
+sudo chmod 644 /lib/systemd/system/pyrunner.service
+```
+
+```
+sudo systemctl daemon-reload
+```
+
+```
+sudo systemctl enable pyrunner.service
+```
+
+
+```
+sudo reboot
+```
+
+
+```
+sudo systemctl status pyrunner.service
+```
+
