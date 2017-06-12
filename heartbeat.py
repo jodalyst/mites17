@@ -15,7 +15,7 @@ CHECKING_PERIOD = 5 #seconds
 timing = time.time()
 PROCESS_TIMEOUT = 10
 
-lcl = '~/heartbeat'
+lcl = '/home/pi/mites17'
 hal = 'https://eesjs1.net/testsite/hw_supervisor'
 
 
