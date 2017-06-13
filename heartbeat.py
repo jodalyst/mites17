@@ -51,10 +51,7 @@ while True:
                 r = requests.post(hal,data=payload, timeout=1.0)
                 print('sent')
             except:
-                try:
-                    proc.kill()
-                except:
-                    pass #issue!!
+                p.kill()
                 payload['command'] = 'hw_response_provide'
                 payload['hw_resp'] = 'TIMEOUT'
                 r = requests.post(hal,data=payload, timeout=1.0)
