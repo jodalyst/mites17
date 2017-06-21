@@ -41,7 +41,7 @@ while True:
             print(r)
             k = json.loads(r.text)
             data = k['hw_command']
-            p = Popen(['python', '-'],stdin=PIPE,stdout=PIPE,stderr=PIPE)
+            p = Popen(['python3', '-'],stdin=PIPE,stdout=PIPE,stderr=PIPE)
             print('about to run')
             try:
                 outs, errs = p.communicate(input=data.encode(),timeout=PROCESS_TIMEOUT)
