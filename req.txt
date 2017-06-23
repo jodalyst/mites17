@@ -2,4 +2,4 @@ flask
 flask-socketio
 pyserial
 eventlet
-
+spidev
