@@ -86,8 +86,8 @@ def readChannel(channel):
 
 def dataThread():
     unique = 456
-    meas_value = readChannel(0)
     while True:
+        meas_value = readChannel(0)
         socketio.emit('update_{}'.format(unique),[meas_value],broadcast =True)
         print("sending")
         time.sleep(0.02)
