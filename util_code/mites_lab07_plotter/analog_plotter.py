@@ -105,5 +105,5 @@ def index():
 
 
 if __name__ == '__main__':
-    socketio.run(app, port=3000, debug=True)
+    socketio.run(app, port=3000, debug=False)
 
