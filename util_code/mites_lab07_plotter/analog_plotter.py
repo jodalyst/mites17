@@ -86,11 +86,18 @@ def readChannel(channel):
 
 def dataThread():
     unique = 456
+    burst_duration = 10
+    burst_count = 0
+    meas_values = []
     while True:
-        meas_value = readChannel(0)
-        socketio.emit('update_{}'.format(unique),[meas_value],broadcast =True)
-        print("sending: {}".format(meas_value))
-        time.sleep(0.1)
+        meas_values.append(readChannel(0))
+        burst_count +=1
+        if burst_count%burst_duration ==0:
+            socketio.emit('update_{}'.format(unique),[[meas_values],broadcast =True)
+            meas_values = []
+            burst_count = 0
+            print("sending: {}".format(meas_value))
+        time.sleep(0.05)
 
 
 @app.route('/')
