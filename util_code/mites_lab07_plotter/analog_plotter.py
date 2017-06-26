@@ -96,7 +96,7 @@ def dataThread():
             socketio.emit('update_{}'.format(unique),[[meas_values]],broadcast =True)
             meas_values = []
             burst_count = 0
-            print("sending: {}".format(meas_value))
+            print("sending: data")
         time.sleep(0.05)
 
 
